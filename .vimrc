@@ -148,8 +148,8 @@ set wildignore=**.o,*~,.swp,*.bak,*.pyc,*.class " Ignore compiled files
 "  YouCompgeteMe
 " --------------
 " 配置默认的ycm_extra_conf.py文件路径
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-let g:ycm_python_binary_path = '/usr/bin/python3.6'
+" let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+" let g:ycm_python_binary_path = '/usr/bin/python3.6'
 " nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_complete_in_comments = 1	"  在注释输入中也能补全
@@ -167,6 +167,7 @@ let g:ycm_semantic_triggers =  {
             \   'cpp,objcpp' : ['->', '.', '::'],
             \   'perl' : ['->'],
             \   'php' : ['->', '::', '(', 'use ', 'namespace ', '\'],
+            \   'cs,java,typescript,javascript,d,python,perl6,scala,vb,elixir,go' : ['.'],
             \   'cs,java,typescript,d,python,perl6,scala,vb,elixir,go' : ['.','re!(?=[a-zA-Z]{3,4})'],
             \   'html': ['<', '"', '</', ' '],
             \   'vim' : ['re![_a-za-z]+[_\w]*\.'],
@@ -202,7 +203,7 @@ nnoremap <leader><leader>hp :TernDefPreview<cr>
 nnoremap <leader><leader>hr :TernRename<cr>
 " location 列表显示全部引用行
 nnoremap <leader><leader>hs :TernRefs<cr>
-autocmd FileType javascrip,vue setlocal omnifunc=tern#Complete
+autocmd FileType javascript,vue setlocal omnifunc=tern#Complete
 
 " -------------
 "  NERDTree

@@ -1,0 +1,24 @@
+{
+    "dontLoad": [
+        "lib/**/*.js"
+    ],
+    "libs": [
+        "browser",
+        "jquery",
+        "ecma6",
+        "ecma5"
+    ],
+    "loadEagerly": [
+        "src/**/*.js"
+    ],
+    "plugins": {
+        "express": {},
+        "node": {},
+        "requirejs": {
+            "baseURL": "./",
+            "paths": {}
+        },
+	"vue": {},
+	"es_modules": {}
+    }
+}
